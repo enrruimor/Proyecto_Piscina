@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Sistema de Recomendacion </title>
+</head>
+<body>
+{% include 'header.html' %}
+<section>
+<h1>Puntuaciones usuario {{id}}</h1>
+{% for puntuacion,libro in datos %}
+<ul>ISBN: {{libro.ISBN}} - Titulo: {{libro.titulo}} - Puntuacion: {{puntuacion.puntuacion}}</ul>
+{% empty %}
+<h2> El Usuario no ha puntuado ninguna Pelicula </h2>
+{% endfor %}
+</section>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Sistema de Recomendacion </title>
+</head>
+<body>
+{% include 'header.html' %}
+<h1> Mejores libros</h1>
+{% for libro, puntuacion in data %}
+<ul>
+<li>ISBN: {{libro.ISBN}} - Título:{{libro.titulo}} - Autor: {{libro.autor}} - Puntuacion : {{puntuacion}}</li>
+</ul>
+{% empty %}
+<h2> Insufficient data </h2>
+{% endfor %}
+</body>
+</html>

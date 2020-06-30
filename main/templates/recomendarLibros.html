@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Sistema de Recomendacion </title>
+</head>
+<body>
+{% include 'header.html' %}
+<section>
+<h1>Diez libros recomendados a {{user}} son:</h1>
+<l>
+{% for l,p in datos %}
+<li>ISBN: {{l.ISBN}} - Titulo: {{l.titulo}} - Autor: {{l.autor}} - Puntuacion: {{p}}</li>
+{% endfor %}
+</l>
+</section>
+</body>
+</html>

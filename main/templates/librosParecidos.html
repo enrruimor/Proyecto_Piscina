@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Sistema de Recomendacion </title>
+</head>
+<body>
+{% include 'header.html' %}
+<section>
+<h1>Cinco libros que se parecen a {{ISBN}} son:</h1>
+<l>
+{% for libro, similitud in datos %}
+<li>ISBN: {{libro.ISBN}} - Similaridad: {{similitud | floatformat:"2"}}</li>
+{% endfor %}
+</l>
+</section>
+</body>
+</html>
